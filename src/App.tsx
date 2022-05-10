@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import Header from './components/header'
+import Main from './components/main';
+import Contents from './components/contents'
 import './App.css';
 
 function App() {
+  const nameList = [
+    "そら","シロ","ステファニー・ドーラ", "ジブリール"
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title="header"/>
+      <Main>
+        <p>ノゲノラはめっちゃ面白いが、ノゲノラゼロは個人的にもっと面白い！</p>
+        <Contents title="キャラクターネーム" lists={nameList}/>
+      </Main>
     </div>
   );
 }
